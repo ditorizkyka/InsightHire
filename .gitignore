@@ -1,0 +1,3 @@
+# Abaikan folder __pycache__ dan file .pyc
+__pycache__/
+*.py[cod]
