@@ -1,0 +1,19 @@
+We are looking for a highly motivated AI Engineer to join our innovation team.
+
+Responsibilities:
+- Design, develop, and deploy machine learning models for real-world applications.
+- Work on projects involving computer vision, natural language processing, and generative AI.
+- Collaborate with data scientists and backend engineers to integrate models into production.
+- Optimize models for performance and scalability.
+
+Qualifications:
+- Bachelor's degree in Computer Science, Artificial Intelligence, or related field.
+- Proficient in Python and libraries such as TensorFlow, PyTorch, and scikit-learn.
+- Experience with NLP techniques and frameworks like Hugging Face Transformers or spaCy.
+- Knowledge of cloud platforms (AWS, GCP, or Azure) and containerization (Docker).
+- Familiarity with MLOps tools (MLflow, DVC) is a plus.
+- Strong problem-solving and communication skills.
+
+Nice to Have:
+- Experience with large language models (LLMs) or Retrieval-Augmented Generation (RAG).
+- Contributions to open-source AI/ML projects.
