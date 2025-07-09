@@ -147,7 +147,7 @@ if st.button("🔍 Analyze Resume"):
             preprocessed_resume = parse_resume(resume_text)
             preprocessed_jd = parse_jd(jd_text)
             similarity, matched, missing = match_resume(preprocessed_jd, preprocessed_resume, set_skills[selected_job])
-            result = score_resume(similarity, matched, missing)
+            result = score_resume(similarity, matched, missing, selected_job)
 
             st.success("✅ Analisis selesai!")
             st.subheader("📊 Resume Fit Score:")
@@ -156,16 +156,19 @@ if st.button("🔍 Analyze Resume"):
 
             st.subheader("✅ Skill yang Terpenuhi")
             if not result["matched"]:
-                st.write("Tidak ada skill yang match dengan Job Description yang anda berikan")
+                st.write("😅 Sepertinya belum ada skill di CV-mu yang cocok dengan job description ini. Yuk, coba tambahkan beberapa skill yang relevan biar makin klop! 💪✨")
             else :
-                st.write(", ".join(result["matched"]) or "-")
-            
+                st.write("Skill yang sudah ada di CV mu adalah " + (", ".join(result["matched"]) or "-"))
 
+        
             st.subheader("❌ Skill yang Kurang")
-            if not missing:
-                st.write("Tidak ada skill yang miss dengan Job Description yang anda berikan. Congrats")
+            if not result["matched"] and not result["missing"]:
+                 st.write("🤔 Hmm... Sepertinya isi CV-mu belum sesuai dengan job description ini. Yuk, coba sesuaikan atau tambahkan skill yang relevan biar lebih match! 💡📄")
+            elif not result["missing"]:
+                st.write("🎉 Keren! Semua skill di CV-mu sudah sesuai dengan job description yang diberikan. Nggak ada yang miss — great job! 💼🔥")
             else :
-                st.write(", ".join(missing) or "-")
+                st.write("Skill yang kurang di CV mu adalah " + (", ".join(result["missing"]) or "-"))
+
                 
 
             st.subheader("💬 Feedback")
