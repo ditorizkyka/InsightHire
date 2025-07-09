@@ -20,6 +20,7 @@ def similarity_score(preprocessed_jd,preprocessed_resume):
 
 def extract_skills(text: str, setSkill) -> set:
      # 📚 Daftar skill yang ingin dideteksi
+
     text = text.lower()
     found_skills = set()
     for skill in setSkill:
