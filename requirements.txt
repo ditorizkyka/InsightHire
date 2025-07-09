@@ -1,4 +1,4 @@
 streamlit
 spacy
 pdfminer.six
-PyMuPDF==1.23.7
+PyMuPDF
